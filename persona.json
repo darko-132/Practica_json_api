@@ -1,0 +1,10 @@
+{
+    "personas" :[
+        {"nombre": "jorge", "nickname": "jorge123"},
+        {"nombre": "andres", "nickname": "andres123"},
+        {"nombre": "marcos", "nickname": "marcos123"},
+        {"nombre": "miguel", "nickname": "miguel123"},
+        {"nombre": "antonio", "nickname": "antonio123"},
+        {"nombre": "jef", "nickname": "jef123"}
+         ]
+}

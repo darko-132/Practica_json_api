@@ -7,11 +7,39 @@
     <title>JSON</title>
 </head>
 <body>
-    
+    <ul id="personas"></ul>
     <script>
-        var persona= [];
-        console.log(persona)
+      /*   var personas =[
+            {"nombre": "jorge", "nickname": "jorge123"},
+            {"nombre": "andres", "nickname": "andres123"},
+            {"nombre": "marcos", "nickname": "marcos123"},
+            {"nombre": "miguel", "nickname": "miguel123"},
+            {"nombre": "antonio", "nickname": "antonio123"},
+            {"nombre": "jef", "nickname": "jef123"}
+             ];
 
+        var salida ='';
+
+        for (let i = 0; i < personas.length; i++) {
+            salida += `<li>${personas[i].nombre} y su nickname es ${personas[i].nickname}</li>`
+            
+        }
+        document.getElementById('personas').innerHTML = salida; */
+
+        var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+            var respuesta = JSON.parse(xhttp.responseText);
+            var personas= respuesta.url
+            var salida ='';
+
+        console.log(respuesta.url)
+        document.getElementById("personas").innerHTML = `<img src="${personas}" alt="">`
+        }
+            }
+            
+xhttp.open("GET", "https://api.nasa.gov/planetary/apod?api_key=PVZhhkZOHUufMuOM6NZoe6n63OvWh17cgJ0dhdSz", true);
+xhttp.send();
     </script>
 </body>
 </html>
